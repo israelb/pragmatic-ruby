@@ -27,6 +27,8 @@ class Playlist
       puts "\nViewing #{count}"
       @movies.each do |movie|
         WaldorfAndStatler.review(movie)
+        snack = SnackBar.random
+        puts "#{movie.title} led to #{snack.carbs} #{snack.name} carbs being consumed."
         puts movie
       end
     end
