@@ -1,13 +1,23 @@
 require_relative 'playlist'
 
-movie1 = Movie.new("goonies", 10)
-movie2 = Movie.new("ghostbusters", 9)
-movie3 = Movie.new("golfinger")
+playlist = Playlist.new("Kermit")
 
-playlist1 = Playlist.new("Kermit")
-playlist1.add_movie(movie1)
-playlist1.add_movie(movie3)
-playlist1.add_movie(movie2)
+# ARGV.shift   Pasa un nuevo parametro desde la terminal
+playlist.load(ARGV.shift || "movies.csv")
 
-playlist1.play(3)
-playlist1.print_stats
+
+loop do
+  puts "\nHow many viewings? ('quit' to exit)"
+  answer = gets.chomp.downcase
+  case answer
+    when /^\d+$/
+      playlist.play(answer.to_i)
+    when 'quit', 'exit'
+      playlist.print_stats
+      break
+    else
+      puts "Please enter a number or 'quit'"
+  end
+end
+
+playlist.save

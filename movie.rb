@@ -8,6 +8,16 @@ class Movie
     @snack_carbs = Hash.new(0)
   end
 
+  def self.from_csv(line)
+    # separa la linea que se pasa del csv
+    title, rank = line.split(',')
+    Movie.new(title, Integer(rank))
+  end
+
+  def to_csv
+    "#{@title},#{@rank}"
+  end
+
   # Vamos recorriendo el hash y enviando los valores con yield a donde se invoco.
   def each_snack
     @snack_carbs.each do |name, carbs|
