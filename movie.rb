@@ -8,6 +8,14 @@ class Movie
     @snack_carbs = Hash.new(0)
   end
 
+  # Vamos recorriendo el hash y enviando los valores con yield a donde se invoco.
+  def each_snack
+    @snack_carbs.each do |name, carbs|
+      snack = Snack.new(name, carbs)
+      yield snack
+    end
+  end
+
   def carbs_consumed
     @snack_carbs.values.reduce(0, :+)
   end

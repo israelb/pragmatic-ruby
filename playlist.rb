@@ -48,6 +48,12 @@ class Playlist
     puts "#{total_carbs_consumed} total carbs consumed"
     @movies.sort.each do |movie|
       puts "\n#{movie.title}'s snack totals:"
+      
+      # Invocamos el método each_snack el cual nos regresa un bloque yield.
+      movie.each_snack do |snack|
+        puts "#{snack.carbs} total #{snack.name} carbs"
+      end
+
       puts "#{movie.carbs_consumed} grand total carbs"
     end
 
