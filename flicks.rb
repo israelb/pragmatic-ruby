@@ -1,7 +1,7 @@
 require_relative 'playlist'
 require_relative 'movie3d'
 
-playlist = Playlist.new("Kermit")
+playlist = Flicks::Playlist.new("Kermit")
 
 # ARGV.shift   Pasa un nuevo parametro desde la terminal
 playlist.load(ARGV.shift || "movies.csv")

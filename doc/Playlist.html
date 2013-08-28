@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Playlist - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>playlist.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-add_movie">#add_movie</a>
+    
+    <li ><a href="#method-i-load">#load</a>
+    
+    <li ><a href="#method-i-play">#play</a>
+    
+    <li ><a href="#method-i-print_stats">#print_stats</a>
+    
+    <li ><a href="#method-i-save">#save</a>
+    
+    <li ><a href="#method-i-total_carbs_consumed">#total_carbs_consumed</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./movie_rankings_csv.html">movie_rankings.csv</a>
+  
+    <li class="file"><a href="./movies_csv.html">movies.csv</a>
+  
+    <li class="file"><a href="./superhero_movies_csv.html">superhero_movies.csv</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Movie.html">Movie</a>
+  
+    <li><a href="./Movie3D.html">Movie3D</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Playlist.html">Playlist</a>
+  
+    <li><a href="./Rankable.html">Rankable</a>
+  
+    <li><a href="./SnackBar.html">SnackBar</a>
+  
+    <li><a href="./Song.html">Song</a>
+  
+    <li><a href="./WaldorfAndStatler.html">WaldorfAndStatler</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Playlist</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File playlist.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@movies</span> = []
+  <span class="ruby-ivar">@config</span> = {<span class="ruby-identifier">space</span><span class="ruby-operator">:</span> <span class="ruby-value">50</span>, <span class="ruby-identifier">symbol</span><span class="ruby-operator">:</span> <span class="ruby-string">'*'</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_movie" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_movie</span><span
+            class="method-args">(movie)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_movie-source">
+            <pre><span class="ruby-comment"># File playlist.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_movie</span>(<span class="ruby-identifier">movie</span>)
+  <span class="ruby-ivar">@movies</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">movie</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_movie-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_movie-method -->
+
+    
+      <div id="method-i-load" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load</span><span
+            class="method-args">(from_file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="load-source">
+            <pre><span class="ruby-comment"># File playlist.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load</span>(<span class="ruby-identifier">from_file</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-identifier">from_file</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">add_movie</span>(<span class="ruby-constant">Movie</span>.<span class="ruby-identifier">from_csv</span>(<span class="ruby-identifier">line</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- load-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- load-method -->
+
+    
+      <div id="method-i-play" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">play</span><span
+            class="method-args">(viewings)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="play-source">
+            <pre><span class="ruby-comment"># File playlist.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">play</span>(<span class="ruby-identifier">viewings</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{@name}'s playlist:&quot;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-ivar">@config</span>[<span class="ruby-value">:space</span>], <span class="ruby-ivar">@config</span>[<span class="ruby-value">:symbol</span>]).<span class="ruby-identifier">colorize</span>( <span class="ruby-identifier">color</span><span class="ruby-operator">:</span> <span class="ruby-value">:white</span>, <span class="ruby-value">:background</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:red</span>  )
+  <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@movies</span>.<span class="ruby-identifier">sort</span>
+
+  <span class="ruby-identifier">snacks</span> = <span class="ruby-constant">SnackBar</span><span class="ruby-operator">::</span><span class="ruby-constant">SNACKS</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\nThere are #{snacks.size} snacks available in the snack bar&quot;</span>
+
+  <span class="ruby-identifier">snacks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">snack</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{snack.name} has #{snack.carbs} carbs&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-value">1</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">viewings</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">count</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;Viewing #{count}&quot;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-ivar">@config</span>[<span class="ruby-value">:space</span>], <span class="ruby-ivar">@config</span>[<span class="ruby-value">:symbol</span>]).<span class="ruby-identifier">colorize</span>(<span class="ruby-value">:blue</span>)
+    <span class="ruby-ivar">@movies</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">movie</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">WaldorfAndStatler</span>.<span class="ruby-identifier">review</span>(<span class="ruby-identifier">movie</span>)
+      <span class="ruby-identifier">snack</span> = <span class="ruby-constant">SnackBar</span>.<span class="ruby-identifier">random</span>
+      <span class="ruby-identifier">movie</span>.<span class="ruby-identifier">ate_snack</span>(<span class="ruby-identifier">snack</span>)
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">movie</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- play-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- play-method -->
+
+    
+      <div id="method-i-print_stats" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">print_stats</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="print_stats-source">
+            <pre><span class="ruby-comment"># File playlist.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_stats</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{@name}'s' Stats&quot;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-ivar">@config</span>[<span class="ruby-value">:space</span>], <span class="ruby-ivar">@config</span>[<span class="ruby-value">:symbol</span>]).<span class="ruby-identifier">colorize</span>(<span class="ruby-value">:blue</span>)
+  
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{total_carbs_consumed} total carbs consumed&quot;</span>
+  <span class="ruby-ivar">@movies</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">movie</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n#{movie.title}'s snack totals:&quot;</span>
+    
+    <span class="ruby-comment"># Invocamos el método each_snack el cual nos regresa un bloque yield de cada snack.</span>
+    <span class="ruby-identifier">movie</span>.<span class="ruby-identifier">each_snack</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">snack</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{snack.carbs} total #{snack.name} carbs&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{movie.carbs_consumed} grand total carbs&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">hits</span>, <span class="ruby-identifier">flops</span> = <span class="ruby-ivar">@movies</span>.<span class="ruby-identifier">partition</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">movie</span><span class="ruby-operator">|</span> <span class="ruby-identifier">movie</span>.<span class="ruby-identifier">hit?</span> }
+
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nHits:&quot;</span>.<span class="ruby-identifier">colorize</span>(<span class="ruby-value">:red</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">hits</span>.<span class="ruby-identifier">sort</span>
+
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nFlops:&quot;</span>.<span class="ruby-identifier">colorize</span>(<span class="ruby-value">:red</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">flops</span>.<span class="ruby-identifier">sort</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- print_stats-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- print_stats-method -->
+
+    
+      <div id="method-i-save" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save</span><span
+            class="method-args">(to_file="movie_rankings.csv")</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save-source">
+            <pre><span class="ruby-comment"># File playlist.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save</span>(<span class="ruby-identifier">to_file</span>=<span class="ruby-string">&quot;movie_rankings.csv&quot;</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">to_file</span>, <span class="ruby-string">&quot;w&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@movies</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">movie</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">movie</span>.<span class="ruby-identifier">to_csv</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save-method -->
+
+    
+      <div id="method-i-total_carbs_consumed" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">total_carbs_consumed</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="total_carbs_consumed-source">
+            <pre><span class="ruby-comment"># File playlist.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">total_carbs_consumed</span>
+  <span class="ruby-ivar">@movies</span>.<span class="ruby-identifier">reduce</span>(<span class="ruby-value">0</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">movie</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">movie</span>.<span class="ruby-identifier">carbs_consumed</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- total_carbs_consumed-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- total_carbs_consumed-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

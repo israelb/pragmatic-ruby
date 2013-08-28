@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>module Rankable - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>mixins.rb
+    <li>rankable.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li ><a href="#method-i-hit-3F">#hit?</a>
+    
+    <li ><a href="#method-i-normalized_rank">#normalized_rank</a>
+    
+    <li ><a href="#method-i-status">#status</a>
+    
+    <li ><a href="#method-i-thumbs_down">#thumbs_down</a>
+    
+    <li ><a href="#method-i-thumbs_up">#thumbs_up</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./movie_rankings_csv.html">movie_rankings.csv</a>
+  
+    <li class="file"><a href="./movies_csv.html">movies.csv</a>
+  
+    <li class="file"><a href="./superhero_movies_csv.html">superhero_movies.csv</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Movie.html">Movie</a>
+  
+    <li><a href="./Movie3D.html">Movie3D</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Playlist.html">Playlist</a>
+  
+    <li><a href="./Rankable.html">Rankable</a>
+  
+    <li><a href="./SnackBar.html">SnackBar</a>
+  
+    <li><a href="./Song.html">Song</a>
+  
+    <li><a href="./WaldorfAndStatler.html">WaldorfAndStatler</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module Rankable</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>sort method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File rankable.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">other</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rank</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-hit-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">hit?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="hit-3F-source">
+            <pre><span class="ruby-comment"># File rankable.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hit?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">10</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- hit-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- hit-3F-method -->
+
+    
+      <div id="method-i-normalized_rank" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">normalized_rank</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="normalized_rank-source">
+            <pre><span class="ruby-comment"># File rankable.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">normalized_rank</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- normalized_rank-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- normalized_rank-method -->
+
+    
+      <div id="method-i-status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">status</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="status-source">
+            <pre><span class="ruby-comment"># File rankable.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">hit?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;Hit&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;Flop&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- status-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- status-method -->
+
+    
+      <div id="method-i-thumbs_down" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">thumbs_down</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="thumbs_down-source">
+            <pre><span class="ruby-comment"># File rankable.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">thumbs_down</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- thumbs_down-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- thumbs_down-method -->
+
+    
+      <div id="method-i-thumbs_up" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">thumbs_up</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="thumbs_up-source">
+            <pre><span class="ruby-comment"># File mixins.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">thumbs_up</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{@title} got a thumbs up! has #{@rank}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- thumbs_up-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- thumbs_up-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
